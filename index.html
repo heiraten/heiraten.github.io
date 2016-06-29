@@ -5,49 +5,28 @@
 <link rel="stylesheet" href="heiraten.css">
 </head>
 <body>
-<h1>Gooey Menu</h1>
-<h2>Using CSS and SVG Filters</h2>
-<h3>By <a href="http://codepen.io/lbebber">Lucas Bebber</a></h3>
-<h4><a href="http://codepen.io/lbebber/pen/LELBEo" target="_blank">Version 1</a> - Version 2 - <a href="http://codepen.io/lbebber/pen/pvwZJp" target="_blank">Version 3</a> - <a href="http://codepen.io/lbebber/pen/rawQKR" target="_blank">Version 4</a></h4>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-<nav class="menu">
-  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-  <label class="menu-open-button" for="menu-open">
-    <span class="hamburger hamburger-1"></span>
-    <span class="hamburger hamburger-2"></span>
-    <span class="hamburger hamburger-3"></span>
-  </label>
-  
-  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-ellipsis-h"></i> </a>
-  
-</nav>
+<header>
+	<h1>Sweet button, dude...</h1>
+	<h2>I bet you can't click just once.</h2>
+	<div class="btn-multi">
+		<input type="checkbox" id="multi-btn" name="multi-btn" />
+		<label for="multi-btn">
+			<span class="btn btn-circle"><i class="fa fa-comment icon" aria-hidden="true"></i></span>
+			<span class="btn btn-circle"><i class="fa fa-heart icon" aria-hidden="true"></i></span>
+			<span class="btn btn-circle"><i class="fa fa-pencil icon" aria-hidden="true"></i></span>
+			<span class="btn btn-circle"><i class="fa fa-plus icon"></i></span>
+			<i class="fa icon">&#10005;</i>
+		</label>
+	</div>
+</header>
 
 
-<!-- filters -->
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <defs>
-      <filter id="shadowed-goo">
-          
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
-          <feComposite in2="shadow" in="goo" result="goo" />
-          <feComposite in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-      <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feComposite in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-    </defs>
-</svg>
+<main>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id sodales purus, a tempor mi. Nullam ac laoreet tortor. Vivamus ut congue neque, id rhoncus libero. Phasellus et accumsan diam. Pellentesque interdum urna eros, in venenatis lorem tincidunt a. Pellentesque euismod velit sed nunc consectetur vulputate. Sed posuere est id convallis elementum. Phasellus accumsan iaculis est, eu auctor purus mattis non. Phasellus pharetra ex ac lacus ullamcorper, eget tempus augue hendrerit. Vestibulum vitae lorem augue. Maecenas consectetur tempor turpis, nec imperdiet libero blandit ac. Mauris dignissim purus eu euismod mattis.</p>
+
+<p>Nulla eu condimentum eros. Curabitur vel metus in magna fringilla congue. Cras ac dictum lectus, vitae imperdiet libero. Mauris et neque nibh. Etiam auctor urna purus, in consectetur enim fermentum eget. Vivamus tincidunt massa sapien, sed fermentum lectus laoreet sed. Donec porttitor lacus sit amet metus facilisis, ac pretium magna venenatis. Ut libero nisi, volutpat id auctor at, congue in dui. Integer turpis sapien, cursus eu magna vel, posuere bibendum sapien.</p>
+
+<p>Nulla accumsan leo quis volutpat rhoncus. Integer nec porttitor ante, quis pharetra ipsum. Vivamus nulla nunc, commodo at commodo vel, placerat quis orci. Phasellus porta, purus vel ornare luctus, lorem nunc molestie nisi, sed fermentum purus nulla vel est. Nullam purus velit, vestibulum non velit sit amet, elementum auctor mauris. In non lobortis tellus. Maecenas fringilla, turpis eget luctus aliquam, sem ligula varius magna, sit amet dignissim tellus erat non neque. Fusce dignissim ipsum sed orci aliquam, a molestie magna egestas. In hac habitasse platea dictumst. Curabitur vel rhoncus elit, quis vulputate augue. Pellentesque ac pellentesque diam, eu feugiat velit. In sagittis ipsum eu velit malesuada, sed iaculis dui euismod. Vestibulum tempus metus et mollis posuere. Etiam lacinia, tellus vitae porttitor vulputate, neque purus rutrum lorem, non vehicula metus augue eu elit. Integer quis turpis quis justo molestie ultricies nec semper enim. In hac habitasse platea dictumst.</p>
+</main>
 </body>
 </html>
